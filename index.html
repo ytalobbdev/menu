@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ytalo Queiroz | Hub de Ferramentas Web</title>
+  <meta name="description" content="Central de ferramentas web gratuitas, utilitários e sistemas desenvolvidos por Ytalo Queiroz. Conversores, editores de PDF, compressores e muito mais.">
+  <meta name="keywords" content="Ytalo Queiroz, Ferramentas Web, QR Code, Editor PDF, Comprimir Arquivo, Converter Arquivo, Download Thumbnail, Programador">
+  <meta name="author" content="Ytalo Queiroz">
+  
+  <!-- Open Graph / Meta Compartilhamento -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ytalo Queiroz | Hub de Ferramentas Web">
+  <meta property="og:description" content="Acesse ferramentas web rápidas, modernas e gratuitas desenvolvidas por Ytalo Queiroz.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Efeitos de Fundo Dinâmico -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Container Principal -->
+  <div class="app-container">
+    
+    <!-- Cabeçalho / Hero -->
+    <header class="hero-header">
+      <div class="badge-status">
+        <span class="status-dot"></span>
+        <span class="status-text">Hub Online • Sistemas Ativos</span>
+      </div>
+
+      <div class="profile-title-group">
+        <div class="avatar-container">
+          <div class="avatar-glow"></div>
+          <div class="avatar-inner">
+            <i class="fa-solid fa-code"></i>
+          </div>
+        </div>
+        <div class="title-content">
+          <h1 class="dev-name">Ytalo Queiroz</h1>
+          <p class="dev-role"><span class="highlight">Programador</span> & Desenvolvedor de Soluções Web</p>
+        </div>
+      </div>
+
+      <p class="hero-description">
+        Bem-vindo ao meu portal de ferramentas. Aqui você encontra meus sistemas e utilitários funcionais, rápidos e 100% gratuitos para o seu dia a dia.
+      </p>
+
+      <!-- Barra de Pesquisa e Filtros -->
+      <div class="search-filter-wrapper">
+        <div class="search-bar-container">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Pesquisar ferramenta (ex: pdf, comprimir, qr code)..." 
+            autocomplete="off"
+            aria-label="Buscar ferramenta"
+          >
+          <button id="clearSearchBtn" class="clear-btn" title="Limpar busca" aria-label="Limpar busca">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <span class="search-shortcut" title="Atalho de teclado">Ctrl + K</span>
+        </div>
+
+        <!-- Categorias Rápidas -->
+        <div class="category-chips" id="categoryChips">
+          <button class="chip active" data-category="all">
+            <i class="fa-solid fa-layer-group"></i> Todas <span class="count-badge" id="countAll">5</span>
+          </button>
+          <button class="chip" data-category="utilitarios">
+            <i class="fa-solid fa-screwdriver-wrench"></i> Utilitários
+          </button>
+          <button class="chip" data-category="documentos">
+            <i class="fa-solid fa-file-lines"></i> Documentos & PDF
+          </button>
+          <button class="chip" data-category="midia">
+            <i class="fa-solid fa-photo-film"></i> Mídia & Imagens
+          </button>
+          <button class="chip" data-category="conversores">
+            <i class="fa-solid fa-arrows-rotate"></i> Conversores
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Seção de Ferramentas / Cards -->
+    <main class="tools-main">
+      <div class="section-heading">
+        <h2 class="section-title">
+          <i class="fa-solid fa-grid-2"></i> Menu de Ferramentas & Atalhos
+        </h2>
+        <span class="tools-counter" id="toolsCounter">Exibindo 5 de 5 ferramentas</span>
+      </div>
+
+      <!-- Grid de Cards -->
+      <div class="tools-grid" id="toolsGrid">
+
+        <!-- Card 1: QR Coder -->
+        <article class="tool-card" data-category="utilitarios" data-tags="qr code qrcode gerador leitor scanner codigos">
+          <div class="card-glow-layer"></div>
+          <div class="card-inner">
+            <div class="card-header">
+              <div class="tool-icon-box color-purple">
+                <i class="fa-solid fa-qrcode"></i>
+              </div>
+              <span class="card-category-tag">Utilitários</span>
+            </div>
+
+            <div class="card-body">
+              <h3 class="tool-title">QR Coder</h3>
+              <p class="tool-description">
+                Gerador e leitor avançado de QR Codes para links, textos, Wi-Fi e dados de forma instantânea e personalizável.
+              </p>
+              <div class="tool-link-preview">
+                <i class="fa-solid fa-link"></i>
+                <span class="link-text">ytalobbdev.github.io/qrcoder</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <a 
+                href="https://ytalobbdev.github.io/qrcoder" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn-action btn-launch"
+                title="Abrir QR Coder em nova aba"
+              >
+                <span>Acessar Ferramenta</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <button 
+                class="btn-action btn-copy" 
+                data-url="https://ytalobbdev.github.io/qrcoder"
+                title="Copiar link"
+                aria-label="Copiar link do QR Coder"
+              >
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Download de Thumbnail -->
+        <article class="tool-card" data-category="midia" data-tags="download thumbnail capa youtube imagem video foto preview hd">
+          <div class="card-glow-layer"></div>
+          <div class="card-inner">
+            <div class="card-header">
+              <div class="tool-icon-box color-pink">
+                <i class="fa-solid fa-image"></i>
+              </div>
+              <span class="card-category-tag">Mídia & Imagens</span>
+            </div>
+
+            <div class="card-body">
+              <h3 class="tool-title">Download de Thumbnail</h3>
+              <p class="tool-description">
+                Extraia e baixe thumbnails de vídeos e plataformas em alta resolução (Full HD / 4K) com apenas um clique.
+              </p>
+              <div class="tool-link-preview">
+                <i class="fa-solid fa-link"></i>
+                <span class="link-text">ytalobbdev.github.io/Download-de-Thumbnail</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <a 
+                href="https://ytalobbdev.github.io/Download-de-Thumbnail" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn-action btn-launch"
+                title="Abrir Download de Thumbnail em nova aba"
+              >
+                <span>Acessar Ferramenta</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <button 
+                class="btn-action btn-copy" 
+                data-url="https://ytalobbdev.github.io/Download-de-Thumbnail"
+                title="Copiar link"
+                aria-label="Copiar link do Download de Thumbnail"
+              >
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Editor PDF -->
+        <article class="tool-card" data-category="documentos" data-tags="editor pdf juntar separar mesclar documentos editar visualizar">
+          <div class="card-glow-layer"></div>
+          <div class="card-inner">
+            <div class="card-header">
+              <div class="tool-icon-box color-red">
+                <i class="fa-solid fa-file-pdf"></i>
+              </div>
+              <span class="card-category-tag">Documentos & PDF</span>
+            </div>
+
+            <div class="card-body">
+              <h3 class="tool-title">Editor PDF</h3>
+              <p class="tool-description">
+                Suíte prática para manipulação de PDFs: edite, combine múltiplos arquivos, organize páginas e visualize sem complicações.
+              </p>
+              <div class="tool-link-preview">
+                <i class="fa-solid fa-link"></i>
+                <span class="link-text">ytalobbdev.github.io/editorpdf</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <a 
+                href="https://ytalobbdev.github.io/editorpdf" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn-action btn-launch"
+                title="Abrir Editor PDF em nova aba"
+              >
+                <span>Acessar Ferramenta</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <button 
+                class="btn-action btn-copy" 
+                data-url="https://ytalobbdev.github.io/editorpdf"
+                title="Copiar link"
+                aria-label="Copiar link do Editor PDF"
+              >
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Comprimir Arquivo -->
+        <article class="tool-card" data-category="utilitarios" data-tags="comprimir comprimidor otimizar diminuir tamanho arquivo zip imagem kb mb compactar">
+          <div class="card-glow-layer"></div>
+          <div class="card-inner">
+            <div class="card-header">
+              <div class="tool-icon-box color-cyan">
+                <i class="fa-solid fa-file-zipper"></i>
+              </div>
+              <span class="card-category-tag">Utilitários</span>
+            </div>
+
+            <div class="card-body">
+              <h3 class="tool-title">Comprimir Arquivo</h3>
+              <p class="tool-description">
+                Reduza drasticamente o peso de arquivos, imagens e documentos mantendo a alta fidelidade e qualidade visual.
+              </p>
+              <div class="tool-link-preview">
+                <i class="fa-solid fa-link"></i>
+                <span class="link-text">ytalobbdev.github.io/comprimirarquivo</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <a 
+                href="https://ytalobbdev.github.io/comprimirarquivo" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn-action btn-launch"
+                title="Abrir Comprimir Arquivo em nova aba"
+              >
+                <span>Acessar Ferramenta</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <button 
+                class="btn-action btn-copy" 
+                data-url="https://ytalobbdev.github.io/comprimirarquivo"
+                title="Copiar link"
+                aria-label="Copiar link de Comprimir Arquivo"
+              >
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5: Converter Arquivo -->
+        <article class="tool-card" data-category="conversores" data-tags="converter conversor transformacao formato extensao png jpg webp pdf mp3 docx">
+          <div class="card-glow-layer"></div>
+          <div class="card-inner">
+            <div class="card-header">
+              <div class="tool-icon-box color-emerald">
+                <i class="fa-solid fa-rotate"></i>
+              </div>
+              <span class="card-category-tag">Conversores</span>
+            </div>
+
+            <div class="card-body">
+              <h3 class="tool-title">Converter Arquivo</h3>
+              <p class="tool-description">
+                Conversor multifuncional e rápido para transformar tipos de arquivos e extensões diretamente no navegador.
+              </p>
+              <div class="tool-link-preview">
+                <i class="fa-solid fa-link"></i>
+                <span class="link-text">ytalobbdev.github.io/converterarquivo</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <a 
+                href="https://ytalobbdev.github.io/converterarquivo" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn-action btn-launch"
+                title="Abrir Converter Arquivo em nova aba"
+              >
+                <span>Acessar Ferramenta</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <button 
+                class="btn-action btn-copy" 
+                data-url="https://ytalobbdev.github.io/converterarquivo"
+                title="Copiar link"
+                aria-label="Copiar link de Converter Arquivo"
+              >
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Estado Vazio (Caso a busca não encontre nada) -->
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <div class="empty-icon">
+          <i class="fa-solid fa-magnifying-glass-xmark"></i>
+        </div>
+        <h3 class="empty-title">Nenhuma ferramenta encontrada</h3>
+        <p class="empty-desc">Não encontramos nenhum resultado correspondente à sua pesquisa.</p>
+        <button id="resetSearchBtn" class="btn-reset">
+          <i class="fa-solid fa-arrow-rotate-left"></i> Limpar Filtro
+        </button>
+      </div>
+    </main>
+
+    <!-- Seção de Contato e Sugestões (Rodapé Informativo) -->
+    <footer class="site-footer">
+      <div class="footer-cta-card">
+        <div class="cta-header">
+          <div class="cta-icon-glow">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <div class="cta-title-box">
+            <h3 class="cta-title">Projetos Sob Medida & Sugestões</h3>
+            <p class="cta-subtitle">Tem uma ideia inovadora ou precisa de uma ferramenta exclusiva?</p>
+          </div>
+        </div>
+
+        <div class="cta-grid">
+          <!-- Bloco 1: Ferramentas Privadas -->
+          <div class="cta-block">
+            <div class="block-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="block-content">
+              <h4>Desenvolvimento de Ferramenta Privada</h4>
+              <p>
+                Precisa de uma ferramenta, automação ou sistema exclusivo e sob medida para sua empresa, negócio ou uso pessoal? Desenvolvo soluções sob demanda com alta qualidade.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bloco 2: Sugestões Gratuitas -->
+          <div class="cta-block">
+            <div class="block-icon">
+              <i class="fa-solid fa-hand-holding-heart"></i>
+            </div>
+            <div class="block-content">
+              <h4>Sugestão de Ferramenta Gratuita</h4>
+              <p>
+                Tem alguma ideia de ferramenta útil que gostaria de ver publicada aqui gratuitamente para ajudar você e toda a comunidade? Adorarei ouvir sua sugestão!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ação de Contato -->
+        <div class="cta-contact-action">
+          <p class="contact-prompt">
+            <i class="fa-solid fa-envelope-open-text"></i> Para solicitar um projeto ou enviar uma sugestão, entre em contato comigo:
+          </p>
+          <div class="contact-buttons-row">
+            <a href="mailto:ytaloqueiroz.dev@gmail.com?subject=Contato%20via%20Hub%20de%20Ferramentas" class="btn-contact-primary">
+              <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem por E-mail
+            </a>
+            <button class="btn-contact-secondary" id="openContactInfoBtn">
+              <i class="fa-solid fa-circle-info"></i> Como Funciona o Contato?
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Assinatura Final -->
+      <div class="footer-bottom">
+        <p class="copyright">
+          © 2026 <strong>Ytalo Queiroz</strong> • Desenvolvedor de Software. Todos os direitos reservados.
+        </p>
+        <p class="footer-subtext">
+          Construído para máxima velocidade, produtividade e acesso rápido a ferramentas essenciais.
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modal de Informações de Contato -->
+  <div class="modal-backdrop" id="contactModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeModalBtn" aria-label="Fechar modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-header">
+        <div class="modal-icon">
+          <i class="fa-solid fa-handshake"></i>
+        </div>
+        <h3 class="modal-title">Fale com Ytalo Queiroz</h3>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">
+          Você pode me contatar diretamente para orçamentos de ferramentas privadas ou para sugerir novas ideias para a lista pública:
+        </p>
+        
+        <div class="contact-method-card">
+          <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="method-info">
+            <span class="method-label">E-mail Principal</span>
+            <span class="method-value" id="emailText">ytaloqueiroz.dev@gmail.com</span>
+          </div>
+          <button class="copy-email-btn" id="copyEmailBtn" title="Copiar e-mail">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+        </div>
+
+        <div class="info-notes">
+          <div class="note-item">
+            <i class="fa-solid fa-check"></i>
+            <span><strong>Ferramentas Privadas:</strong> Descreva o problema, o que a ferramenta precisa fazer e o prazo desejado.</span>
+          </div>
+          <div class="note-item">
+            <i class="fa-solid fa-check"></i>
+            <span><strong>Novas Ferramentas Públicas:</strong> Avalio todas as sugestões da comunidade e publico as melhores gratuitamente aqui.</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="mailto:ytaloqueiroz.dev@gmail.com?subject=Contato%20-%20Hub%20de%20Ferramentas" class="btn-action btn-launch" style="width: 100%; justify-content: center;">
+          <i class="fa-solid fa-envelope"></i> Abrir Aplicativo de E-mail
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check toast-icon"></i>
+    <span class="toast-message" id="toastMessage">Link copiado com sucesso!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
